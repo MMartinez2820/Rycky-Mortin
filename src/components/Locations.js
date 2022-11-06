@@ -15,21 +15,18 @@ const Locations = () => {
   let api = 'https://rickandmortyapi.com/api/location'
 
   useEffect(() => {
-    axios
-      .get(`${api}${randomId}`)
+    axios.get(`${api}${randomId}`)
       .then((res) => setCharacter(res.data));
       axios.get(`${api}?/page=1`).then(res=>setPage(res.data.results))
   }, []);
 
   const change = () => {
-    axios
-      .get(`https://rickandmortyapi.com/api/location/${Id}`)
+    axios.get(`https://rickandmortyapi.com/api/location/${Id}`)
       .then( (res) => setCharacter(res.data));
   }
 
   const Search = (e) => {
-    axios
-      .get(`${api}/${e}`)
+    axios.get(`${api}/${e}`)
       .then((res) => setCharacter(res.data))
   }
 

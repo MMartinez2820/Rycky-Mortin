@@ -25,7 +25,7 @@ const ResidentInfo = ({resident}) => {
     console.log(info);
     return (
         <li className='list'>
-            <img className='image-user' src={info.image} alt="image undefined" />
+            <img className='image-user' src={info?.image} alt="" />
             <h2 className='name-user'>{info?.name}</h2>
             <h2 className='status'>{circle()} status: {info.status}</h2>
             <h2>origin: {info.origin?.name}</h2>

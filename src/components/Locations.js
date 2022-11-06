@@ -37,14 +37,12 @@ const Locations = () => {
     <>
       <h1>Rick and Morty</h1>
       <div className='container-search'>
-        <div>
         <input 
         type="text" 
         value= {Id}
         onChange= {e => setId(e.target.value)}/>
         <button onClick={change}>Search/Id</button>
-        </div>
-        
+       
         <div className='list-search'>
           {Id && page.map((p) => (
             <Page key={p?.name} Search={Search} p={p} Id={Id}/> 
